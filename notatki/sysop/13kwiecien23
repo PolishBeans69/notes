@@ -1,0 +1,18 @@
+Lekcja | T: ls -la
+
+1.chmod XXX plik
+	4 - read
+	2 - write 
+	1 - execute
+	dla kombinacji suma
+
+	chmod 777 plik - pelne uprawnienia
+	chmod u=r-- - uzytkownik ma tylko read
+	chmod u-r-- - zabiera uzytkownikowi r
+	chmod u+r-- - daje userowi read
+
+2.chown user plik
+3.chgrp - zmien wlascicielstwo grupy
+4.chmod - bog wie
+5.pswd - tylko administrator moze edytowac ten plik
+
