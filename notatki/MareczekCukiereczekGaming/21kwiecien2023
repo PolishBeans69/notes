@@ -1,0 +1,52 @@
+Lekcja | T: Procesy w systemie linux
+
+1. Definicja > Proces > Jest to obecnie wykonywana komenda/skrypt
+2. Atrybuty procesu
+    
+    - przestrzen adresowa
+    - licznik programu
+    - licznik stanu
+    - licznik rejestru
+    - deskryptory plikow
+    - dane procesu
+    - zaleznosci rodzinne
+    - liczniki statyczne
+
+3. Stany procesu
+
+    - pracujacy w trybie uzytkownika (proces jest na procesorze i wykonuje kod)
+    - pracujacy w trybie jadra (jadro wykonuje wywolania wywolane przez proces)
+    - uspiony
+    - gotowy do wykonania (moze byc uruchomiony w kazdej chwili)
+    - zombie/dead/defund (proces zakonczyl)
+
+4. Polecenia
+
+    - ps [OPCJA] - podaje nam informacje o dzialajacych procesach
+      np: ps -l / ps l / ps --l
+      pokazuje informacje o procesach [-l]
+      format ekstra pelny [-f]
+      wszystkie procesy [-A / -e]
+      wyswietla drzewo procesow [f]
+      numer uzytkownika [-U]
+
+    - top [OPCJA] - taki task manager, ale htop lepszejszy jest
+      wyswietla skroty klawiszowe [h]
+      wybor pol prezentujacyhc info o procesach [-f]
+      zabija wskazany proces [-k]
+      wyjscie z programu [q]
+
+    - htop - top, ale lepszejszy
+    - pstree [OPCJA] - drzewo procesow
+      dodaje numer PID [-p]
+      wyroznia podany proces [-H PID]
+
+    - kill [SYGNAL] PID - zabija proces
+      np: kill -9 4008 - wysyla sygnal nr 9 do procesu 4008
+          kill -9 -1 - wysyla sygnal nr 9 do procesu kazdego
+          kill -SIGNSTOP 4008 - zawiesza dzialanie procesu
+          kill -18 4008 - odwiesza proces
+
+    - killall
+
+
