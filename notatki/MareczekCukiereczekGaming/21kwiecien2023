@@ -47,6 +47,40 @@ Lekcja | T: Procesy w systemie linux
           kill -SIGNSTOP 4008 - zawiesza dzialanie procesu
           kill -18 4008 - odwiesza proces
 
-    - killall
+    - killall [SYGNAL] nazwa - zabija proces o danej nazwie
+      np: killall sleep
+
+    - pkill [SYGNAL][OPCJE] wyrazenie - zabija procesy o nazwach pasujacych do wzorca
+      np: pkill -9 marek sleep - zabija procesy wlaczone przez marka zawierajacych 
+      w nazwie sleep
+
+    - pgrep [OPCJE] wyrazenie - wyswietla PID procesow pasujacych do wzorca 
+      np: kill -9 $(pgrep -u marek sleep) - wysle SGKILL do procesow marka
+      
+    - jobs [-l] - podaje status procesow uruchamianych w biezacej powloce
+      np: jobs -l - wyswietla PID procesu
+
+    - bg - uruchamia zawieszone procesy w tle
+      np: bg %2 - wznowienie zadania 2
+
+    - fg [JID] - uruchamia zadania zawieszone na pierwszym planie
+      np: fg %2 - przeniesienie programu vim z poprzedniego przykladu na pierwszym
+      plan
+
+    - nice -priorytet [PID] [-u uzytkownik] 
+      np: nice +19 emacs - odpala proces emacs z niskim priotytetem
+
+    - renice priorytet [PID] [-u uzytkownik] - pozwala zwiekszyc priorytet
+      dzialajacych programuw
+      np: renice 19 4343 -u student - zwiekszy NICE procesu 4343 nalezacego do student do 19
+    - at [-f plik] czas - odpala proces o danym czasie
+      np: at 10:20 -f plik - odpali komendy w pliku plik o 10:20
+
+    - atq - wyswietla liste procesow odpalonych przez at 
+    - atm - usuwa z kolejki procesy o danym PID
+    - crontab [-e/-l/-r] - tabela demona cron zarzadzajacego zaplanowanymi procesami
+      np: -e - edycja tabeli zadan 
+          -r - wyswietla tabele zadan 
+          -l - wyswietla biezaca tabele
 
 
