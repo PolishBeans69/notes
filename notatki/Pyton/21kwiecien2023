@@ -10,22 +10,23 @@ p1.color("black")
 
 while True:
     if abs(p1.ycor()) > 250 or abs(p1.xcor()) > 250:
+        p1.end_fill()
         p1.setx(0)
         p1.sety(0)
     else:
-        x = randint(0,4)
+        x = randint(0,3)
         match x:
             case 0:
                 p1.fd(25)
             case 1:
                 p1.lt(90)
                 p1.fd(25)
+                p1.end_fill()
             case 2:
                 p1.rt(90)
                 p1.fd(25)
+                p1.end_fill()
             case 3:
                 p1.color((r:=random(),g:=random(),b:=random()))
                 p1.begin_fill() 
-            case 4:
-                p1.end_fill()
 
