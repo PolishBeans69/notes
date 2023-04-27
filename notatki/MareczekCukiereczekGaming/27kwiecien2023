@@ -13,4 +13,22 @@
    2. #!/bin/bash
       Kill 2613
    3. ctrl + x -> y -> enter
+   4. chmod 777 plik
+   5../plik -> odpala
+8. Wytlumacz polecenia
+   kill - zabija dany proces
+   kill all - zabija wszystkie procesy
+   jobs - wyswietl liste zatrzymanych zadan
+   ps - pokazuje obecnie aktywne procesy
+   & - uruchamia wiele procesow naraz
+   | - wykorzystanie wielu komend w 1 poleceniu
+   nice - uruchamia proces z danym priorytetem
+   nohup - utrzymanie procesu podczas wylogowania
+   htop - htop
+9. Opisz narzedzia top i htop
+   top - brzydki htop
+   htop - ladny top
+10.Jak zarzadazac priorytetem z terminala
+11.\_(0w0)_/
+   PID - process id
 
